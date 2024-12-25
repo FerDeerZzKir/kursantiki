@@ -1,0 +1,237 @@
+body {
+    background: linear-gradient(182.05deg, rgb(6, 6, 6) 2%, rgb(65, 39, 109) 30%, rgb(116, 68, 198) 60%, rgb(23, 13, 41) 90%);
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    background-size: cover; /* Ensure background covers the entire viewport */
+    position: relative;
+    width: 100%; /* Set width to 100% */
+    min-height: 100vh; /* Ensure the body covers the entire viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0 0 200px 0; /* Increase padding to the bottom to prevent overlap with footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+}
+
+/* MenuLine */
+.MenuLine {
+    position: absolute;
+    width: calc(100% - 32px); /* Set width to 100% minus the total margin */
+    height: 3px; /* Set height to 3px */
+    left: 16px; /* Adjust left to 16px */
+    top: 58px;
+    background: linear-gradient(90deg, rgb(100, 0, 173), rgb(81, 21, 42), rgb(55, 13, 138)); /* Gradient background */
+}
+
+/* SiteName */
+.SiteName {
+    position: absolute;
+    width: 353px;
+    height: 45px;
+    left: 16px;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Lalezar', sans-serif; /* Ensure the font is available */
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 1%;
+    text-align: left;
+}
+
+/* Menu-icon */
+.Menu-icon {
+    position: absolute;
+    width: 46px;
+    height: 49px;
+    right: 16px; /* Adjust right to 16px */
+    top: 10px; /* Adjust top to 10px */
+}
+
+/* Wrapper for the blocks */
+.BlockWrapper {
+    display: flex;
+    justify-content: center; /* Center the BlockContainer */
+    width: 100%;
+}
+
+/* Container for the blocks */
+.BlockContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the blocks within the container */
+    gap: 20px; /* Space between blocks */
+    margin-top: 200px; /* Adjust top margin */
+    max-width: 1200px; /* Optional: limit the width of the container */
+}
+
+/* Rectangle 4 */
+.Rectangle4 {
+    width: 371px;
+    height: auto; /* Adjust height to auto */
+    padding: 20px; /* Add padding for content */
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 3px solid rgba(6, 255, 51, 0.5); /* Brighter inner border */
+    box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.14); /* Outer shadow */
+    background: rgba(6, 255, 51, 0.2); /* Make background almost completely transparent */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (top) */
+    justify-content: flex-start; /* Align content to the start (top) */
+    text-align: center; /* Center text */
+}
+
+/* Heading inside Rectangle 4 */
+.Rectangle4 h2 {
+    font-family: 'Abhaya Libre', serif; /* Ensure the font is available */
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(6, 255, 51);
+    line-height: 28px;
+    letter-spacing: 1%;
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Ensure the heading takes full width */
+    margin: 0 0 10px 0; /* Margin for spacing */
+}
+
+/* List inside Rectangle 4 */
+.Rectangle4 ul {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Full width */
+}
+
+.Rectangle4 ul li {
+    font-family: 'ABeeZee', sans-serif; /* Ensure the font is available */
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(214, 0, 66);
+    line-height: 1.5; /* Adjust line height for better spacing */
+    letter-spacing: 1%;
+    text-align: left;
+    margin-bottom: 10px; /* Increase space between list items */
+}
+
+.Rectangle4 ul li .homework {
+    font-family: 'ABeeZee', sans-serif; /* Ensure the font is available */
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(169, 170, 169);
+    line-height: 1px;
+    letter-spacing: 1%;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    width: 100%; /* Stretch footer across the entire width */
+    height: 105px;
+    left: 0;
+    bottom: 0; /* Position footer at the bottom */
+    background: rgb(14, 0, 37);
+    opacity: 0.93;
+    border-top: 4px solid rgb(209, 0, 255);
+    box-shadow: 0 0 10px rgba(34, 0, 251, 0.51), 0 0 20px rgba(0, 36, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the start (left) */
+    padding: 20px; /* Add padding for content */
+    box-sizing: border-box;
+}
+
+footer p {
+    color: rgb(79, 79, 79);
+    font-family: 'ABeeZee', sans-serif; /* Ensure the font is available */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 1%;
+    text-align: left;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 1200px) {
+    .Rectangle4 {
+        width: 500px; /* Increase width for larger screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .Rectangle4 {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .Rectangle4 {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .Rectangle4 {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+/* Домашнее задание */
+.Homework {
+    position: relative;
+    width: 315px;
+    height: 36px;
+    top: 150px; /* Adjust top margin */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center text horizontally */
+    color: rgb(212, 212, 212);
+    font-family: 'Advent Pro', sans-serif; /* Ensure the font is available */
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 1%;
+    text-align: center;
+}
+
+/* Media queries for text adaptation */
+@media (min-width: 1200px) {
+    .SiteName {
+        font-size: 40px;
+    }
+    .Homework {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .SiteName {
+        font-size: 35px;
+    }
+    .Homework {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .SiteName {
+        font-size: 30px;
+    }
+    .Homework {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .SiteName {
+        font-size: 25px;
+    }
+    .Homework {
+        font-size: 25px;
+    }
+}
