@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="MenuLine"></div>
     <div class="SiteName">Kursantiki</div>
-    <img src="icons/menuLogo.svg" class="Menu-icon" alt="Menu Icon">
+    <div class="Menu">
+        <a href="#">Записать домашку</a>
+        <a href="#">Главная страница</a>
+        <a href="#">Контакты</a>
+    </div>
+    <img src="icons/menuLogo.svg" class="Menu-icon" id="menu-icon" alt="Menu Icon">
     <div class="Homework">Домашнее задание</div>
     <div class="BlockWrapper">
         <div class="BlockContainer">
@@ -74,8 +80,40 @@
             </div>
         </div>
     </div>
+    <div class="NewRectangle" id="new-rectangle">
+        <img src="icons/backarrow.svg" class="BackArrow" id="back-arrow" alt="Back Arrow Icon">
+        <a href="#">Записать домашку</a>
+        <a href="#">Главная страница</a>
+        <a href="#">Контакты</a>
+    </div>
     <footer>
         <p>© Все права защищены. Kursantiki, 2024-2025.<br>Разработано Шерифом и его собакой</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const blocks = document.querySelectorAll('.Rectangle4');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            blocks.forEach(block => {
+                observer.observe(block);
+            });
+        });
+
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var newRectangle = document.getElementById('new-rectangle');
+            newRectangle.classList.add('active');
+        });
+
+        document.getElementById('back-arrow').addEventListener('click', function() {
+            var newRectangle = document.getElementById('new-rectangle');
+            newRectangle.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
